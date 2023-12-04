@@ -9,11 +9,8 @@ const currentPath = pathname.slice(1, -1);
   </head>
   <div class="flex flex-col gap-8 items-center w-56 mx-4 my-16">
     <a href="/" class="tracking-widest">helloklara.com</a>
-    <img class="w-20" src="/public/favicon.svg" alt="star" />
-    <a
-      href="/"
-      class={currentPath === "" ? "text-yellow-300 font-semibold" : ""}>About</a
-    >
+    <img class="w-20" src="/public/star.svg" alt="star" />
+
     <a
       href="/projects/"
       class={currentPath === "projects" ? "text-yellow-300 font-semibold" : ""}
@@ -27,6 +24,10 @@ const currentPath = pathname.slice(1, -1);
     <a
       href="/CV/"
       class={currentPath === "CV" ? "text-yellow-300 font-semibold" : ""}>CV</a
+    >
+    <a
+      href="/"
+      class={currentPath === "" ? "text-yellow-300 font-semibold" : ""}>About</a
     >
   </div>
 

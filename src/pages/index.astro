@@ -1,17 +1,19 @@
 ---
 import Folder from "../components/Folder.astro";
+import LinkList from "../components/LinkList.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="/star.svg" />
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
   <title>helloklara</title>
 </head>
 <body>
   <MainLayout title="About">
+    <LinkList />
     <p>
       Hi, I'm Klara, a developer originally from Oslo. I'm currently studying in
       Trondheim and will be graduating with a B. Sc. degree from the Norwegian
@@ -22,14 +24,13 @@ import MainLayout from "../layouts/MainLayout.astro";
       and family, and pursuing my hobbies. Stay tuned for updates on my personal
       website!
     </p>
-    <a href="mailto: klarawust@gmail.com">klarawust@gmail.com</a>
-    <div class="flex flex-row gap-16 mt-16">
+    <div class="flex flex-row gap-16">
       <Folder name="pics" />
       <Folder name="friends" />
       <Folder name="books" />
     </div>
   </MainLayout>
 </body>
-<div class="w-60 m-16">
-  <img src="public/images/klara_1280.webp" alt="Me" />
+<div class="w-60 mt-[132px]">
+  <img src="public/images/klara.jpeg" alt="Me" />
 </div>

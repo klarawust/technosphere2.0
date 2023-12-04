@@ -1,0 +1,28 @@
+---
+const links: { type: string; url: string }[] = [
+  { type: "mail", url: "klarawust@gmail.com" },
+  { type: "github", url: "https://github.com/klarawust" },
+  { type: "linkedin", url: "https://www.linkedin.com/in/klarawust/" },
+  { type: "instagram", url: "https://www.instagram.com/klarawustenberg/" },
+];
+---
+
+<div class="flex flex-row gap-2">
+  {
+    links.map((link) => (
+      <div class="flex flex-row gap-2">
+        <img class="w-4" src="/star.svg" alt="star" />
+        {link.type === "mail" ? (
+          <a class="hover:text-yellow-300" href={`mailto:${link.url}`}>
+            {link.type}
+          </a>
+        ) : (
+          <a class="hover:text-yellow-300" href={link.url}>
+            {link.type}
+          </a>
+        )}
+      </div>
+    ))
+  }
+  <img class="w-4" src="/star.svg" alt="star" />
+</div>
