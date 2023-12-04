@@ -1,5 +1,5 @@
 ---
-import Navbar from "../components/Navbar.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <head>
@@ -9,6 +9,5 @@ import Navbar from "../components/Navbar.astro";
   <meta name="generator" content={Astro.generator} />
 </head>
 <body>
-  <Navbar />
-  <h1>Portfolio</h1>
+  <MainLayout title="Portfolio" />
 </body>
