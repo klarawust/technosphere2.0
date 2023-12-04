@@ -1,0 +1,14 @@
+---
+const { name } = Astro.props;
+function clickFolder(name: any): void {
+  console.log(name);
+  console.log("hallo");
+}
+---
+
+<div class="w-16 text-center text-xs">
+  <button onclick="clickFolder()">
+    <img src="public/folder.png" alt="Folder" />
+    <p>{name}</p>
+  </button>
+</div>
