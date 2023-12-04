@@ -1,5 +1,8 @@
 ---
+import CVcontent from "../components/CVcontent.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import { Education } from "../data/CVdata.astro";
+import { Job } from "../data/CVdata.astro";
 ---
 
 <head>
@@ -9,5 +12,9 @@ import MainLayout from "../layouts/MainLayout.astro";
   <meta name="generator" content={Astro.generator} />
 </head>
 <body>
-  <MainLayout title="CV" />
+  <MainLayout title="CV">
+    <CVcontent type="Job" list={Job} />
+    <img class="w-32" src="/bigstar.svg" alt="bigstar" />
+    <CVcontent type="Education" list={Education} />
+  </MainLayout>
 </body>
