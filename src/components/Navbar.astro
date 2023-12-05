@@ -7,27 +7,39 @@ const currentPath = pathname.slice(1, -1);
   <head>
     <title>{currentPath}</title>
   </head>
-  <div class="flex flex-col gap-8 items-center w-56 mx-4 my-16">
-    <a href="/" class="tracking-widest">helloklara.com</a>
-    <img class="w-20" src="/images/illustrations/star.svg" alt="star" />
-    <a
-      href="/"
-      class={currentPath === "" ? "text-yellow-300 font-semibold" : ""}>About</a
-    >
-    <a
-      href="/projects/"
-      class={currentPath === "projects" ? "text-yellow-300 font-semibold" : ""}
-      >Projects</a
-    >
-    <!-- <a
-      href="/portfolio/"
-      class={currentPath === "portfolio" ? "text-yellow-300 font-semibold" : ""}
-      >Portfolio</a
-    > -->
-    <a
-      href="/CV/"
-      class={currentPath === "CV" ? "text-yellow-300 font-semibold" : ""}>CV</a
-    >
+  <div class="flex flex-col my-16 gap-8 md:w-56 md:ml-12 items-center">
+    <div class="flex flex-row gap-4 md:flex-col md:gap-8 items-center">
+      <a href="/" class="tracking-widest">helloklara.com</a>
+      <img
+        class="w-8 md:w-20"
+        src="/images/illustrations/star.svg"
+        alt="star"
+      />
+    </div>
+    <div class="flex gap-4 md:flex-col sm:gap-8">
+      <a
+        href="/"
+        class={currentPath === "" ? "text-yellow-300 font-semibold" : ""}
+        >About</a
+      >
+      <a
+        href="/projects/"
+        class={currentPath === "projects"
+          ? "text-yellow-300 font-semibold"
+          : ""}>Projects</a
+      >
+      <!-- <a
+        href="/portfolio/"
+        class={currentPath === "portfolio"
+          ? "text-yellow-300 font-semibold"
+          : ""}>Portfolio</a
+      > -->
+      <a
+        href="/CV/"
+        class={currentPath === "CV" ? "text-yellow-300 font-semibold" : ""}
+        >CV</a
+      >
+    </div>
   </div>
 
 
