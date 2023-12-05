@@ -1,0 +1,42 @@
+---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1, -1);
+---
+
+<html lang="en">
+  <head>
+    <title>{currentPath}</title>
+  </head>
+  <div class="flex flex-col gap-8 items-center w-56 mx-4 mt-16">
+    <div class="flex flex-row gap-4">
+      <a href="/" class="tracking-widest">helloklara.com</a>
+      <img class="w-8" src="/images/illustrations/star.svg" alt="star" />
+    </div>
+    <div class="flex flex-row gap-2">
+      <a
+        href="/"
+        class={currentPath === "" ? "text-yellow-300 font-semibold" : ""}
+        >About</a
+      >
+      <a
+        href="/projects/"
+        class={currentPath === "projects"
+          ? "text-yellow-300 font-semibold"
+          : ""}>Projects</a
+      >
+      <a
+        href="/portfolio/"
+        class={currentPath === "portfolio"
+          ? "text-yellow-300 font-semibold"
+          : ""}>Portfolio</a
+      >
+      <a
+        href="/CV/"
+        class={currentPath === "CV" ? "text-yellow-300 font-semibold" : ""}
+        >CV</a
+      >
+    </div>
+  </div>
+
+
+</html>

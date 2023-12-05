@@ -1,12 +1,22 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import NavbarPhone from "../components/NavbarPhone.astro";
 const { title } = Astro.props;
 ---
 
-<body class="flex flex-row gap-16 tracking-wide text-neutral-800">
-  <Navbar />
-  <div class="flex flex-col gap-8 w-[500px] my-16">
-    <h1 class="text-3xl">{title}</h1>
-    <slot />
+<body class="gap-16 tracking-wide text-neutral-800">
+  <div class="hidden md:flex flex-row gap-16">
+    <Navbar />
+    <div class="flex flex-col gap-8 sm:w-[500px] w-[400px] my-16">
+      <h1 class="text-3xl">{title}</h1>
+      <slot />
+    </div>
+  </div>
+  <div class="md:hidden flex flex-col items-center">
+    <NavbarPhone />
+    <div class="flex flex-col gap-8 sm:w-[500px] w-[400px] p-16">
+      <h1 class="text-3xl">{title}</h1>
+      <slot />
+    </div>
   </div>
 </body>
