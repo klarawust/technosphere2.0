@@ -11,11 +11,13 @@ const { type, list: entries } = Astro.props;
         companyOrInstitution: string;
         date: string;
         description: string;
+        relevantTech: string;
       }) => (
         <div class="text-neutral-500 font-light">
           <p>{entry.date}</p>
           <p class="text-neutral-800 font-medium">{`${entry.title}, ${entry.companyOrInstitution}`}</p>
           <p>{entry.description}</p>
+          <p class="text-xs">{entry.relevantTech}</p>
         </div>
       )
     )

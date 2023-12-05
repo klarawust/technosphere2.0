@@ -1,20 +1,37 @@
 ---
-const friends: { name: string; imageLink: string, url: string }[] = [
-  { name: "aurora", imageLink: "/images/friends/aurora_1280.webp", url: "https://kennedy.no" },
-  { name: "isak", imageLink: "/images/friends/isak_1280.webp", url: "https://isak.me/"}, 
-  { name: "magnus", imageLink: "/images/friends/magnus_1280.webp", url: "https://www.magnus.ouren.no"},
-//   { name: "mattias", imageLink: "/images/friends/mattias_1280.webp", url: "https://www.mattiastofte.dev"}, 
-  { name: "nuutti", imageLink: "/images/friends/nuutti_1280.webp", url: "https://nuutti.no"}, 
+const friends: { name: string; imageLink: string; url: string }[] = [
+  {
+    name: "aurora",
+    imageLink: "/images/friends/aurora_1280.webp",
+    url: "https://kennedy.no",
+  },
+  {
+    name: "isak",
+    imageLink: "/images/friends/isak_1280.webp",
+    url: "https://isak.me/",
+  },
+  {
+    name: "magnus",
+    imageLink: "/images/friends/magnus_1280.webp",
+    url: "https://www.magnus.ouren.no",
+  },
+  //   { name: "mattias", imageLink: "/images/friends/mattias_1280.webp", url: "https://www.mattiastofte.dev"},
+  {
+    name: "nuutti",
+    imageLink: "/images/friends/nuutti_1280.webp",
+    url: "https://nuutti.no",
+  },
 ];
 ---
 
 <div class="flex flex-row gap-8 m-16">
-  {friends.map((friend) => (
-    <a class="flex flex-col gap-2" href={friend.url}>
-      <img class="w-20" src={friend.imageLink} alt="" />
-      <p>{friend.name}</p>
-    </a>
+  {
+    friends.map((friend) => (
+      <a class="flex flex-col gap-2" href={friend.url}>
+        <img class="w-20" src={friend.imageLink} alt="" />
+        <p>{friend.name}</p>
+      </a>
     ))
   }
-  <a href="/"><img class="w-8 mb-64" src="/x.svg" alt="x" /></a>
+  <a href="/"><img class="w-8 mb-24" src="/x.svg" alt="x" /></a>
 </div>

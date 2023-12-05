@@ -11,7 +11,7 @@ const links: { type: string; url: string }[] = [
   {
     links.map((link) => (
       <div class="flex flex-row gap-2">
-        <img class="w-4" src="/star.svg" alt="star" />
+        <img class="w-4" src="/images/illustrations/star.svg" alt="star" />
         {link.type === "mail" ? (
           <a class="hover:text-yellow-300" href={`mailto:${link.url}`}>
             {link.type}
@@ -24,5 +24,5 @@ const links: { type: string; url: string }[] = [
       </div>
     ))
   }
-  <img class="w-4" src="/star.svg" alt="star" />
+  <img class="w-4" src="/images/illustrations/star.svg" alt="star" />
 </div>

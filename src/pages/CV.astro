@@ -7,14 +7,14 @@ import { Job } from "../data/CVdata.astro";
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" type="image/svg+xml" href="/star.svg" />
+  <link rel="icon" type="image/svg+xml" href="/images/illustrations/star.svg" />
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
 </head>
 <body>
   <MainLayout title="CV">
-    <CVcontent type="Job" list={Job} />
-    <img class="w-32" src="/bigstar.svg" alt="bigstar" />
+    <CVcontent type="Work" list={Job} />
+    <img class="w-32" src="/images/illustrations/bigstar.svg" alt="bigstar" />
     <CVcontent type="Education" list={Education} />
   </MainLayout>
 </body>

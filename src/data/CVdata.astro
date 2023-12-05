@@ -4,6 +4,7 @@ export interface CVEntry {
   companyOrInstitution: string;
   date: string;
   description: string;
+  relevantTech: string;
 }
 
 export const Education: CVEntry[] = [
@@ -12,12 +13,14 @@ export const Education: CVEntry[] = [
     companyOrInstitution: "NTNU",
     date: "2021 - 2024",
     description: "",
+    relevantTech: "",
   },
   {
     title: "High School Education with focus on Science",
     companyOrInstitution: "Elvebakken videregående skole",
     date: "2017 - 2020",
     description: "",
+    relevantTech: "[Kjemi 1&2, Biologi 1&2, Matematikk R1, Fysikk 1]",
   },
 ];
 
@@ -28,20 +31,23 @@ export const Job: CVEntry[] = [
     date: "2023",
     description:
       "Created a library in three.js to illustrate physics and mathematics courses that Kateter offer.",
+    relevantTech: "[React, Next, Three.js, react-three-fiber]",
   },
   {
     title: "Student Assistent TDT4180 - Human-Machine-Interaction",
     companyOrInstitution: "NTNU",
     date: "spring 2023, spring 2024",
     description:
-      "Learned 1. year students about UI, heuristics and user-friendly interface.",
+      "Assisted 1. year informatics-students to learn about UI, heuristics and user-friendly interface.",
+    relevantTech: "[Figma, User-centered design]",
   },
   {
     title: "Student Assistent IT2805 - Webtechnology",
     companyOrInstitution: "NTNU",
     date: "fall 2023",
     description:
-      "Learned new students easy web-programming in HTML, CSS and Javascript.",
+      "Assisted 1.year informatics-students to learn web-programming.",
+    relevantTech: "[HTML, CSS, JavaScript]",
   },
 ];
 ---
