@@ -3,10 +3,8 @@ const { name } = Astro.props;
 ---
 
 <div class="w-16 text-center text-xs">
-  <button onclick="">
-    <a href={`/${name}/`}>
-      <img src="/images/illustrations/folder.png" alt="Folder" />
-      <p>{name}</p>
-    </a>
-  </button>
+  <a href={`/${name}/`}>
+    <img src="/images/illustrations/folder.png" alt="Folder" />
+    <p>{name}</p>
+  </a>
 </div>
