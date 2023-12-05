@@ -1,0 +1,27 @@
+---
+export interface ProjectsEntry {
+  title: string;
+  url: string;
+  date?: string;
+  description: string;
+  relevantTech?: string;
+}
+
+export const ProjectData: ProjectsEntry[] = [
+  {
+    title: "greekingout.blog",
+    url: "https://greekingout.blog",
+    date: "2023",
+    description:
+      "A blog documenting my exchange semester in Athens. This is where I learned Astro.",
+    relevantTech: "[Astro, React]",
+  },
+  {
+    title: "RANK",
+    url: "https://github.com/klarawust/rank",
+    date: "2023",
+    description: "My favorite card game digitalized. Multiplayer.",
+    relevantTech: "[Bun, express, React, Javascript, Typescript]",
+  },
+];
+---

@@ -1,5 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import ProjectsContent from "../components/ProjectsContent.astro";
+import { ProjectData } from "../data/ProjectsData.astro";
 ---
 
 <head>
@@ -9,5 +11,8 @@ import MainLayout from "../layouts/MainLayout.astro";
   <meta name="generator" content={Astro.generator} />
 </head>
 <body>
-  <MainLayout title="Projects" />
+  <MainLayout title="Projects">
+    <ProjectsContent list={ProjectData} />
+    <img class="w-36" src="/images/illustrations/bigstar.svg" alt="bigstar" />
+  </MainLayout>
 </body>
