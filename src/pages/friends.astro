@@ -24,16 +24,14 @@ const friends: { name: string; imageLink: string; url: string }[] = [
 ];
 ---
 
-<div class="flex flex-row gap-8 m-16 hover:">
+<div class="flex flex-row gap-8 m-16">
   {
     friends.map((friend) => (
-      <a class="flex flex-col gap-2" href={friend.url}>
+      <a class="flex flex-col gap-2 hover:scale-95" href={friend.url}>
         <img class="w-20" src={friend.imageLink} alt="" />
         <p>{friend.name}</p>
       </a>
     ))
   }
-  <a href="/"
-    ><img class="w-8 mb-24" src="/images/illustrations/x.svg" alt="x" /></a
-  >
+  <a href="/"><img class="w-8" src="/images/illustrations/x.svg" alt="x" /></a>
 </div>
