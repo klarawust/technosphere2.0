@@ -1,1 +1,32 @@
-<p>to come soon...</p>
+---
+const images = await Astro.glob("/src/pics/*").then((files) => {
+  return files.map((file) => file.default);
+});
+console.log(images);
+---
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/svg+xml" href="/images/illustrations/star.svg" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
+  <title>pics</title>
+</head>
+<div>
+  <div class="flex flex-col items-end m-12">
+    <a href="/"
+      ><img class="w-12" src="/images/illustrations/x.svg" alt="x" /></a
+    >
+  </div>
+  <div
+    class="flex flex-row flex-wrap gap-8 m-12 tracking-wide text-neutral-800"
+  >
+    {
+      images.map((pic) => (
+        <div class="flex flex-col gap-2 hover:scale-95">
+          <img class="w-28 sm:w-20" src={pic.src} alt="picture" />
+        </div>
+      ))
+    }
+  </div>
+</div>
