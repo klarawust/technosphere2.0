@@ -1,4 +1,5 @@
 ---
+import PortfolioContent from "../components/PortfolioContent.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
@@ -10,21 +11,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 </head>
 <body>
   <MainLayout title="Portfolio">
-    <p class="italic">
-      Hello... this is a new page, because this is a new chapter of me exploring
-      my potential career paths. I like design and estethics, and I want to
-      delve more into this universe. My journey starts here! :)
-    </p>
-    <p>
-      This collage was made in photoshop by deconstructing some pictures I took
-      in Athens and using the elements to test photoshop filters and functions.
-      Just playing around!
-    </p>
-    <img
-      src="/images/portfolio/photoshop1.jpeg"
-      alt="my first photoshop collage"
-    />
-
+    <PortfolioContent />
     <img class="w-32" src="/images/illustrations/bigstar.svg" alt="bigstar" />
   </MainLayout>
 </body>

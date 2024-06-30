@@ -1,7 +1,6 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import ProjectsContent from "../components/ProjectsContent.astro";
-import { ProjectData } from "../data/ProjectsData.astro";
 ---
 
 <head>
@@ -18,7 +17,7 @@ import { ProjectData } from "../data/ProjectsData.astro";
       sparetime projects to learn new technologies or test out something I have
       learned.
     </p>
-    <ProjectsContent list={ProjectData} />
+    <ProjectsContent />
     <img class="w-36" src="/images/illustrations/bigstar.svg" alt="bigstar" />
   </MainLayout>
 </body>

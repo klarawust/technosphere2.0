@@ -1,0 +1,20 @@
+---
+import { portfolioData } from "../data/portfolioData.astro";
+---
+
+<div class="flex flex-col gap-8">
+  {
+    portfolioData.map((entry) => (
+      <div class="text-neutral-500 font-light">
+        <p>{entry.date}</p>
+        <p class="text-neutral-800 font-medium">{entry.title}</p>
+        <p>{entry.description}</p>
+        <div class="flex flex-row gap-4 my-2 w-64">
+          {entry.imageLinks.map((picLink) => (
+            <img src={picLink} alt="screenshots of portfolio entry" />
+          ))}
+        </div>
+      </div>
+    ))
+  }
+</div>

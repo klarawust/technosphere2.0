@@ -1,27 +1,18 @@
 ---
-const { list: entries } = Astro.props;
+import { projectData } from "../data/projectsData.astro";
 ---
 
 <div class="flex flex-col gap-8">
   {
-    entries.map(
-      (entry: {
-        title: string;
-        url: string;
-        date?: string;
-        description: string;
-        relevantTech?: string;
-        images: string[];
-      }) => (
-        <div class="text-neutral-500 font-light">
-          <p>{entry.date}</p>
-          <a href={entry.url}>
-            <p class="text-neutral-800 font-medium">{entry.title}</p>
-          </a>
-          <p>{entry.description}</p>
-          <p class="text-xs">{entry.relevantTech}</p>
-        </div>
-      )
-    )
+    projectData.map((entry) => (
+      <div class="text-neutral-500 font-light">
+        <p>{entry.date}</p>
+        <a href={entry.url}>
+          <p class="text-neutral-800 font-medium">{entry.title}</p>
+        </a>
+        <p>{entry.description}</p>
+        <p class="text-xs">{entry.relevantTech}</p>
+      </div>
+    ))
   }
 </div>

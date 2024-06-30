@@ -1,0 +1,45 @@
+---
+export interface Data {
+  title: string;
+  date?: string;
+  description: string;
+  imageLinks: string[];
+}
+
+export const portfolioData: Data[] = [
+  {
+    title: "Toolhub",
+    description: "Webpage for renting out tools",
+    date: "2023",
+    imageLinks: [
+      "/images/portfolio/toolhub1.png",
+      "/images/portfolio/toolhub2.png",
+      "/images/portfolio/toolhub3.png",
+    ],
+  },
+  {
+    title: "GreekingOut",
+    description: "Blog i created for documenting exchange semester.",
+    date: "2023",
+    imageLinks: ["/images/portfolio/greekingout1.png"],
+  },
+  {
+    title: "Kateter",
+    description: "Part of website i created.",
+    date: "2023",
+    imageLinks: [
+      "/images/portfolio/kateter1.png",
+      "/images/portfolio/graphica1.png",
+    ],
+  },
+  {
+    title: "Rank",
+    description: "My favorite card game digitalized. Designed in Figma.",
+    imageLinks: [
+      "/images/portfolio/rank1.png",
+      "/images/portfolio/rank2.png",
+      "/images/portfolio/rank3.png",
+    ],
+  },
+];
+---
