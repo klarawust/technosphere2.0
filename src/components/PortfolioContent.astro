@@ -9,9 +9,13 @@ import { portfolioData } from "../data/portfolioData.astro";
         <p>{entry.date}</p>
         <p class="text-neutral-800 font-medium">{entry.title}</p>
         <p>{entry.description}</p>
-        <div class="flex flex-row gap-4 my-2 w-64">
+        <div class="flex sm:flex-row flex-col gap-4 my-2">
           {entry.imageLinks.map((picLink) => (
-            <img src={picLink} alt="screenshots of portfolio entry" />
+            <img
+              class="w-40 md:w-72"
+              src={picLink}
+              alt="screenshots of portfolio entry"
+            />
           ))}
         </div>
       </div>
