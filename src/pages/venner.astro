@@ -29,23 +29,26 @@ const friends: { name: string; imageLink: string; url: string }[] = [
   <link rel="icon" type="image/svg+xml" href="/images/illustrations/star.svg" />
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
-  <title>friends</title>
+  <title>venner</title>
 </head>
 <div class="w-full lg:w-3/5">
   <div class="flex flex-col m-12 items-end">
     <a href="/"><img class="w-8" src="/images/illustrations/x.svg" alt="x" /></a
     >
   </div>
-  <div
-    class="flex flex-row flex-wrap gap-8 m-12 lg:ml-28 tracking-wide text-neutral-800"
-  >
-    {
-      friends.map((friend) => (
-        <a class="flex flex-col gap-2" href={friend.url}>
-          <img class="w-36 sm:w-28" src={friend.imageLink} alt="friend" />
-          <p>{friend.name}</p>
-        </a>
-      ))
-    }
+  <div class="flex flex-col gap-8 m-12 lg:ml-28">
+    <p class="italic">
+      Her er vennene mine som også har nettsider, sjekk de ut!
+    </p>
+    <div class="flex flex-row flex-wrap gap-8 tracking-wide text-neutral-800">
+      {
+        friends.map((friend) => (
+          <a class="flex flex-col gap-2" href={friend.url}>
+            <img class="w-36 sm:w-28" src={friend.imageLink} alt="friend" />
+            <p>{friend.name}</p>
+          </a>
+        ))
+      }
+    </div>
   </div>
 </div>

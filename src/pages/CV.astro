@@ -1,8 +1,8 @@
 ---
 import CVcontent from "../components/CVcontent.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-import { Education } from "../data/CVdata.astro";
-import { Job } from "../data/CVdata.astro";
+import { education } from "../data/CVdata.astro";
+import { job } from "../data/CVdata.astro";
 ---
 
 <head>
@@ -13,8 +13,8 @@ import { Job } from "../data/CVdata.astro";
 </head>
 <body>
   <MainLayout title="CV">
-    <CVcontent type="Work" list={Job} />
+    <CVcontent type="Jobb" list={job} />
     <img class="w-32" src="/images/illustrations/bigstar.svg" alt="bigstar" />
-    <CVcontent type="Education" list={Education} />
+    <CVcontent type="Utdanning" list={education} />
   </MainLayout>
 </body>
