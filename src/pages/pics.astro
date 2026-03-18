@@ -22,7 +22,7 @@ const images = Object.values(imageModules);
     class="flex flex-row flex-wrap gap-8 m-12 lg:ml-28 tracking-wide text-neutral-800"
   >
     {
-      images.map((pic) => (
+      images.map((pic: any) => (
         <div class="flex flex-col gap-2">
           <img class="w-36 sm:w-28" src={pic.src} alt="picture" />
         </div>
