@@ -21,6 +21,7 @@ jobs:
         with:
           node-version: 22.12.0
           package-manager: yarn
+          cache-dependency-path: ""
 
   deploy:
     needs: build
