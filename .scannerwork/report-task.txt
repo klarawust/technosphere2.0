@@ -1,7 +1,0 @@
-organization=klarawust
-projectKey=klarawust_technosphere2.0
-serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.83392
-dashboardUrl=https://sonarcloud.io/dashboard?id=klarawust_technosphere2.0
-ceTaskId=AZ0CiJVqIyQqog_3_gdg
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZ0CiJVqIyQqog_3_gdg
