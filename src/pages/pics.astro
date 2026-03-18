@@ -1,7 +1,9 @@
 ---
-const images = await Astro.glob("/src/pics/*").then((files) => {
-  return files.map((file) => file.default);
+const imageModules = import.meta.glob("../pics/*", {
+  eager: true,
+  import: "default",
 });
+const images = Object.values(imageModules);
 ---
 
 <head>
